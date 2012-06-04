@@ -757,6 +757,7 @@ int main(int argc, char **argv)
     if (!charging_mode_booting()) {
          snprintf(tmp, sizeof(tmp), "/init.%s.rc", hardware);
          init_parse_config_file(tmp);
+    }
 
     action_for_each_trigger("early-init", action_add_queue_tail);
 
